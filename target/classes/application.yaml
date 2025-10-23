@@ -5,7 +5,7 @@ spring:
     livereload:
       enabled: true
   datasource:
-    url: jdbc:postgresql://dpg-xyz12345.render.com:5432/payphone_db
+    url: jdbc:postgresql://dpg-d3t926ngi27c73dfbs90-a:5432/payphone_db
     username: payphone_db_user
     password: I4PkYRe9qqmG9mYbeOFhLl0rSWrNhVce
     driver-class-name: org.postgresql.Driver
