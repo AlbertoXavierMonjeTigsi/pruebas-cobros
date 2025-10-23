@@ -1,7 +1,0 @@
-logging:
-  level:
-    net.dualcorp.cobrospayphonews: INFO
-
-seguridad:
-  token:
-    clave: ${CLAVE_TOKEN_DC:clave-prod}
