@@ -1,0 +1,28 @@
+services:
+  app:
+    image: cobros-payphone-ws:latest
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/cobros_payphone_ws
+      DB_USERNAME: cobros
+      DB_PASSWORD: cobros
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      CLAVE_TOKEN_DC: clave-super-secreta
+    depends_on:
+      - db
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: cobros_payphone_ws
+      POSTGRES_USER: cobros
+      POSTGRES_PASSWORD: cobros
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

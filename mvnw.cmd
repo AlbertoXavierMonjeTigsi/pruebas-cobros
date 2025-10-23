@@ -1,0 +1,4 @@
+@ECHO OFF
+SET MVN_CMD=mvn
+%MVN_CMD% %*
+

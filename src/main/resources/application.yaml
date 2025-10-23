@@ -1,0 +1,33 @@
+spring:
+  devtools:
+      restart:
+        enabled: true   
+      livereload:
+        enabled: true  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms-cobros-payphone-ws
+    username: USR_COBROS_PAYPHONE
+    password: 12345678
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 8015
+  servlet:
+    context-path: /cobros-payphone
+
+logging:
+  level:
+    net.dualcorp.cobrospayphonews: DEBUG
+
+seguridad:
+  token:
+    clave: miClaveSecretaParaJwtDePruebasToken

@@ -1,0 +1,7 @@
+logging:
+  level:
+    net.dualcorp.cobrospayphonews: DEBUG
+
+seguridad:
+  token:
+    clave: ${CLAVE_TOKEN_DC:clave-prue}
